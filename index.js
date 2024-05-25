@@ -1,10 +1,21 @@
-const btnLike1 = document.getElementaryById(“btnkLike1”)
-const btnLike2 = document.getElementaryById(“btnkLike2”)
-const countLike1 = document.getElementaryById(“countLikes1”)
-const countLike2 = document.getElementaryById(“countLikes2”)
+1. const btnlike1=document.getElementById("btnLike1")
 
-function hitLike1() {
-  let totalLike1 = parseInt(countLikes1.value) + 1
-  countLike1.textContent = totallikes1.toString()
-}
-btnLike1.addEventListener("click",hitLikes1)
+2. const btnLike2=document.getElementById("btnLike2")
+
+3. const countLikes1=document.getElementById("countLikes1")
+
+4. const counLikes2=document.getElementById("countLikes2")
+
+5.
+
+
+
+6. function hitLikes1() {
+
+7.        let noLikes1=parseInt(countLikes.value) + 1
+
+8. countLikes1.textContent=totalLikes1.toString()
+
+9. }
+
+10. btnLike1.addEventListener("click",hitLikes1)
