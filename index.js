@@ -49,20 +49,4 @@ var product1 = document.getElementById("product1")
             qty3.addEventListener("keyup", addOrder);
             qty4.addEventListener("keyup", addOrder);
             qty5.addEventListener("keyup", addOrder);
-            qty6.addEventListener("keyup", addOrder);ick",DisLikes1)
-
-function DisLikes2() {
-  let totalDisLikes2 = parseInt(countDisLikes2.value) + 1
-   countDisLikes2.textContent = totalDisLikes2.toString()
-}
-btnDisLike2.addEventListener("click",DisLikes2)
-
-
-const comment = document.getElementById("comment")
-const submit = document.getElementById("submit")
-const commentbox = document.getElementById("commentbox")
-
-function submitComment() {
-   commentbox.textContent += comment.value.toString() + "\n"
-}
-submit.addEventListener("click",submitComment)
+            qty6.addEventListener("keyup", addOrder);
