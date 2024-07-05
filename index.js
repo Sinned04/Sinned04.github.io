@@ -1,33 +1,55 @@
-const btnLike1 = document.getElementById("btnLike1")
-const btnLike2 = document.getElementById("btnLike2")
+var product1 = document.getElementById("product1")
+            var qty1 = document.getElementById("qty1")
+            var price1 = document.getElementById("price1")
 
-const countLikes1 = document.getElementById("countLikes1")
-const countLikes2 = document.getElementById("countLikes2")
+            var product2 = document.getElementById("product2")
+            var qty2 = document.getElementById("qty2")
+            var price2 = document.getElementById("price2")
 
-const btnDisLike1 = document.getElementById("btnDisLike1")
-const btnDisLike2 = document.getElementById("btnDisLike2")
+            var carts = document.getElementById("carts")
+            var total = document.getElementById("total")
+            var cash = document.getElementById("cash")
+            var change = document.getElementById("change")
 
-const countDisLikes1 = document.getElementById("countDisLikes1")
-const countDisLikes2 = document.getElementById("countDisLikes2")
-
-
-function hitLikes1() {
-   let totalLikes1 = parseInt(countLikes1.value) + 1
-   countLikes1.textContent = totalLikes1.toString()
-}
-btnLike1.addEventListener("click",hitLikes1)
-
-function hitLikes2() {
-   let totalLikes2 = parseInt(countLikes1.value) + 1
-   countLikes2.textContent = totalLikes2.toString() 
-} 
-btnLike2.addEventListener("click",hitLikes2)
-
-function DisLikes1() {
-  let totalDisLikes1 = parseInt(countDisLikes1.value) + 1
-   countDisLikes1.textContent = totalDisLikes1.toString()
-}
-btnDisLike1.addEventListener("click",DisLikes1)
+            function addOrder() {
+                carts.textContent=""
+                if (parseFloat(qty1.value) > 0){
+                    var order = qty1.value.toString() + ' pc/s x ' + price1.textContent + '------'+ product1.textContent + '------ Php' + (parseFloat(qty1.value)*parseFloat(price1.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+                }
+                if (parseFloat(qty2.value) > 0){
+                    var order = qty2.value.toString() + ' pc/s x ' + price2.textContent + '------' + product2.textContent + '------ Php' + (parseFloat(qty2.value)*parseFloat(price2.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+            }
+           if (parseFloat(qty3.value) > 0){
+                    var order = qty3.value.toString() + ' pc/s x ' + price3.textContent + '------' + product3.textContent + '------ Php' + (parseFloat(qty3.value)*parseFloat(price3.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+            }
+            if (parseFloat(qty4.value) > 0){
+                    var order = qty4.value.toString() + ' pc/s x ' + price4.textContent + '------' + product4.textContent + '------ Php' + (parseFloat(qty4.value)*parseFloat(price4.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+            }
+            if (parseFloat(qty5.value) > 0){
+                    var order = qty5.value.toString() + ' pc/s x ' + price5.textContent + '------' + product5.textContent + '------ Php' + (parseFloat(qty5.value)*parseFloat(price5.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+            }
+            if (parseFloat(qty6.value) > 0){
+                    var order = qty6.value.toString() + ' pc/s x ' + price6.textContent + '------' + product6.textContent + '------ Php' + (parseFloat(qty6.value)*parseFloat(price6.textContent)) + '\n'
+                    //carts.textContent += carts.value.toString() + "\n";
+                    carts.textContent += order
+            }
+            }
+            qty1.addEventListener("keyup", addOrder);
+            qty2.addEventListener("keyup", addOrder);
+            qty3.addEventListener("keyup", addOrder);
+            qty4.addEventListener("keyup", addOrder);
+            qty5.addEventListener("keyup", addOrder);
+            qty6.addEventListener("keyup", addOrder);ick",DisLikes1)
 
 function DisLikes2() {
   let totalDisLikes2 = parseInt(countDisLikes2.value) + 1
