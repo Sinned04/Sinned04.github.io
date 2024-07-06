@@ -1,5 +1,5 @@
-why<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="blue">
    <title> Watch  </title>
    <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -17,31 +17,31 @@ why<!DOCTYPE html>
             <div class="container">
             <div class="row">
                 <div class="col-4 text-center">
-                    <label id="product1"> Casio MTP V001D 7B Silver Stainless  </label>
+                    <label id="product1"> Casio MTP V001D 7B Silver Stainless </label>
                     <img src="watch1.jpg " style="width: 500px;height: 300px;" class="img-thumbnail"/><br>
                     <label for="product1" id="price1">300.00</label>
                     <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
                 </div>
                 <div class="col-4 text-center">
-                        <label id="product2"> Casio MTP-V001GL-1B Brown </label>
+                        <label id="product2">Casio MTP V001GL 1B Brown Leather </label>
                         <img src="watch2.jpg" style="width:500px;height: 300px;" class="img-thumbnail"/><br>
                         <label for="product2" id="price2">320.00</label>
                         <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
                 </div>
                <div class="col-4 text-center">
-                        <label id="product3"> Casio MTP-V001L-7B Black Leather   </label>
+                        <label id="product3"> Casio MTP V001L 7B Black Leather   </label>
                         <img src="watch3.jpg " style="width:500px;height: 300px;" class="img-thumbnail"/><br>
                         <label for="product3" id="price3">340.00</label>
                         <input type="number" class="form-control" id="qty3" placeholder="Enter quantity"/><br>
                 </div>
                <div class="col-4 text-center">
-                        <label id="product4"> Casio Digital Illuminator Sport Watch  </label>
+                        <label id="product4"> Casio Digital Illuminator  </label>
                         <img src=" watch4.webp" style="width:500px;height: 300px;" class="img-thumbnail"/><br>
                         <label for="product4" id="price4">360.00</label>
                         <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/><br>
                 </div>
                <div class="col-4 text-center">
-                        <label id="product5"> Casio Analog Silver   </label>
+                        <label id="product5"> Casio Analog Silver Metal   </label>
                         <img src="watch5.webp " style="width:500px;height: 300px;" class="img-thumbnail"/><br>
                         <label for="product5" id="price5">380.00</label>
                         <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/><br>
@@ -66,96 +66,67 @@ why<!DOCTYPE html>
      <br><br>
        <div class="card text-center">
       <div class="card-footer text-body-secondary">
-        <div class="badge text-bg-info">DELA CUADRA, DENNIS BSIT 3-A</div>
+        <div class="badge text-bg-info">Dennis Dela Cuadra BSIT 3-A</div>
 
       
     </div>
     </div>
       <script>
-      var products = [
-        {
-          product: document.getElementById('product1').textContent,
-          qty: document.getElementById('qty1'),
-          price: parseFloat(document.getElementById('price1').textContent),
-        },
-        {
-          product: document.getElementById('product2').textContent,
-          qty: document.getElementById('qty2'),
-          price: parseFloat(document.getElementById('price2').textContent),
-        },
-        {
-          product: document.getElementById('product3').textContent,
-          qty: document.getElementById('qty3'),
-          price: parseFloat(document.getElementById('price3').textContent),
-        },
-        {
-          product: document.getElementById('product4').textContent,
-          qty: document.getElementById('qty4'),
-          price: parseFloat(document.getElementById('price4').textContent),
-        },
-        {
-          product: document.getElementById('product5').textContent,
-          qty: document.getElementById('qty5'),
-          price: parseFloat(document.getElementById('price5').textContent),
-        },
-        {
-          product: document.getElementById('product6').textContent,
-          qty: document.getElementById('qty6'),
-          price: parseFloat(document.getElementById('price6').textContent),
-        },
-        {
-          product: document.getElementById('product7').textContent,
-          qty: document.getElementById('qty7'),
-          price: parseFloat(document.getElementById('price7').textContent),
-        },
-      ]
-
-      var carts = document.getElementById('carts')
-      var total = document.getElementById('total')
-      var cash = document.getElementById('cash')
-      var change = document.getElementById('change')
-      var errorMessage = document.getElementById('error-message')
-
-      function addOrder() {
-        carts.textContent = ''
-        var totalPrice = 0
-
-        products.forEach(function (item) {
-          if (parseFloat(item.qty.value) > 0) {
-            var order =
-              item.qty.value.toString() +
-              ' pc/s x Php ' +
-              item.price +
-              ' ------ ' +
-              item.product +
-              ' ------ ' +
-              (parseFloat(item.qty.value) * item.price).toFixed(2) +
-              '\n'
-            carts.textContent += order
-            totalPrice += parseFloat(item.qty.value) * item.price
-          }
-        })
-
-        total.value = 'Php ' + totalPrice.toFixed(2)
-
-        cash.addEventListener('keyup', function () {
-          var cashTendered = parseFloat(cash.value)
-          var changeAmount = cashTendered - totalPrice
-          if (!isNaN(changeAmount) && changeAmount >= 0) {
-            change.value = 'Php ' + changeAmount.toFixed(2)
-            errorMessage.textContent = ''
-          } else {
-            change.value = 'Php 0.00'
-            if (cashTendered < totalPrice) {
-              errorMessage.textContent = 'Insufficient cash'
-            } else {
-              errorMessage.textContent = ''
+        var products = [
+        { id: 1, name: " Casio MTP V001D 7B Silver Stainless ", price: 300.00 },
+        { id: 2, name: " Casio MTP V001GL 1B Brown Leather ", price: 320.00 },
+        { id: 3, name: " Casio MTP V001L 7B Black Leather ", price: 340.00 },
+        { id: 4, name: " Casio Digital Illuminator ", price: 360.00 },
+        { id: 5, name: " Casio Analog Silver Metal ", price: 380.00 },
+        { id: 6, name: " Casio Men's Oversized Dive Style Watch ", price: 390.00 },
+    ];
+    
+    
+    var qtyInputs = document.querySelectorAll('[id^="qty"]');
+    var carts = document.getElementById("carts");
+    var totalInput = document.getElementById("total");
+    var cashInput = document.getElementById("cash");
+    var changeInput = document.getElementById("change");
+    
+    
+    qtyInputs.forEach(function(qtyInput) {
+        qtyInput.addEventListener("input", addOrder);
+    });
+    
+    cashInput.addEventListener("input", calculateChange);
+    
+    
+    function addOrder() {
+        carts.textContent = ""; // Clear previous cart content
+    
+        var total = 0;
+    
+        qtyInputs.forEach(function(qtyInput, index) {
+            var qty = parseFloat(qtyInput.value);
+            if (qty > 0) {
+                var product = products[index];
+                var order = qty + " pcs x " + product.name + " - Php " + (qty * product.price).toFixed(2) + "\n";
+                carts.textContent += order;
+                total += qty * product.price;
             }
-          }
-        })
-      }
-
-      products.forEach(function (item) {
-        item.qty.addEventListener('keyup', addOrder)
-      })
+        });
+    
+        totalInput.value = total.toFixed(2); // Update total
+        calculateChange(); // Recalculate change
+    }
+    
+    
+    function calculateChange() {
+        var total = parseFloat(totalInput.value);
+        var cash = parseFloat(cashInput.value);
+    
+        if (!isNaN(total) && !isNaN(cash)) {
+            var change = cash - total;
+            changeInput.value = change.toFixed(2);
+        } else {
+            changeInput.value = "";
+        }
+    }
       </script>
+</body>
+</html
